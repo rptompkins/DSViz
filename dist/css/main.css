@@ -1,0 +1,10 @@
+body {
+  background-color: #959595; }
+
+select {
+  display: block;
+  margin: 20px 0px 20px 0px; }
+
+svg text {
+  fill: white;
+  font: 12px sans-seriff; }
