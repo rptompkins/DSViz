@@ -1,8 +1,7 @@
 var dataDSV = ['DS2014.csv', 'DS2015.csv'];
 
 // function draw(data){
-d3.csv('DS2015.csv', function(data15){
-	d3.csv('DS2014.csv', function(data14){
+d3.csv('DS2015.csv', function(data){
 var width = 1000, barHeight = 40;
 
 var max = d3.max(data, (d) => +d.PFPG);
@@ -44,7 +43,7 @@ var g = canvas.selectAll('g')
 var dropdown = d3.select("#options")
   .on("change", change)
 
-function render (data) {
+function change() {
 
   	var val = dropdown.node().value;
 
@@ -73,7 +72,7 @@ function render (data) {
 
 
 	}
-}
+
 });
 
 // d3.csv('DS2015.csv', draw);

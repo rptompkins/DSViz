@@ -1,5 +1,6 @@
 "use strict";
-function draw(data) {
+var dataDSV = ['DS2014.csv', 'DS2015.csv'];
+d3.csv('DS2015.csv', function(data) {
   var width = 1000,
       barHeight = 40;
   var max = d3.max(data, function(d) {
@@ -54,5 +55,4 @@ function draw(data) {
       return d.Manager;
     });
   }
-}
-d3.csv('DS2015.csv', draw);
+});
